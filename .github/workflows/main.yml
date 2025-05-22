@@ -4,14 +4,12 @@ on:
     branches:
       - main
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Get repo code
-      uses: actions/checkout@v4
-    - name: Install deps
-      run: npm ci
-    - name: Create build
-      run: npm run build
-    
-    
-  
+  build:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Get repo code
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: npm ci
+      - name: Create build
+        run: npm run build
