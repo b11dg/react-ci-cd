@@ -11,5 +11,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install deps
         run: npm ci
+      - name: Run tests
+        run: npm run test
       - name: Create build
         run: npm run build
